@@ -14,9 +14,9 @@ $PROMPT_CONFIG = Join-Path (Get-ScriptDirectory) 'divinurised.omp.json'
 oh-my-posh --init --shell pwsh --config $PROMPT_CONFIG | Invoke-Expression
 
 # PSReadLine
-Set-PSReadLineOption -EditMode Emacs
-Set-PSReadLineOption -BellStyle None
-Set-PSReadLineKeyHandler -Chord 'Ctrl+d' -Function DeleteChar
+# Set-PSReadLineOption -EditMode Emacs
+# Set-PSReadLineOption -BellStyle None
+# Set-PSReadLineKeyHandler -Chord 'Ctrl+d' -Function DeleteChar
 Set-PSReadLineOption -PredictionSource History
 
 #Fzf
