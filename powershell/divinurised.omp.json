@@ -1,0 +1,90 @@
+{
+	"$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+	"final_space": true,
+	"console_title": true,
+	"console_title_style": "template",
+	"console_title_template": "{{if .Root}} ⚡ {{end}}{{.UserName}} ➔ 📁{{.Folder}}",
+	"blocks": [
+		{
+			"type": "rprompt",
+			"alignment": "right",
+			"segments": [
+				{
+					"type": "time",
+					"style": "plain",
+					"foreground": "#E1E1E6",
+					"background": "#483C67",
+					"properties": {
+						"prefix": " \uf64f "
+					}
+				},
+				{
+					"type": "executiontime",
+					"style": "plain",
+					"foreground": "#E1E1E6",
+					"background": "#988BC7",
+					"properties": {
+						"always_enabled": true,
+						"prefix": " 羽"
+					}
+				}
+			]
+		},
+		{
+			"type": "prompt",
+			"alignment": "left",
+			"segments": [
+				{
+					"type": "session",
+					"style": "diamond",
+					"foreground": "#191622",
+					"background": "#78D1E1",
+					"trailing_diamond": "\uE0B0",
+					"properties": {
+						"prefix": "",
+						"postfix": "",
+						"display_host": false,
+						"template": "{{if .Root}} \uF0E7 {{.UserName}} {{else}} {{.UserName}} {{end}}"
+					}
+				},
+				{
+					"type": "path",
+					"style": "powerline",
+					"powerline_symbol": "\uE0B0",
+					"foreground": "#FFFFFF",
+					"background": "#AA91E3",
+					"properties": {
+						"max_depth": 2,
+						"folder_icon": "\uF115",
+						"folder_separator_icon": " \uE0B1 ",
+						"style": "agnoster_short"
+					}
+				},
+				{
+					"type": "git",
+					"style": "powerline",
+					"powerline_symbol": "\uE0B0",
+					"foreground": "#4D4D4D",
+					"background": "#5AF78E",
+					"properties": {
+						"template": "{{ .HEAD }}"
+					}
+				},
+				{
+					"type": "node",
+					"style": "powerline",
+					"powerline_symbol": "\uE0B0",
+					"foreground": "#67E480",
+					"background": "#4D4D4D",
+					"properties": {
+						"prefix": " \uE718 ",
+						"postfix": "",
+						"display_package_manager": true,
+						"yarn_icon": " <#78D1E1></> ",
+						"npm_icon": " <#E96379></> "
+					}
+				}
+			]
+		}
+	]
+}
