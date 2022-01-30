@@ -30,3 +30,15 @@ Set-Alias g git
 Set-Alias grep findstr
 Set-Alias tig 'C:\Program Files\Git\usr\bin\tig.exe'
 Set-Alias less 'C:\Program Files\Git\usr\bin\less.exe'
+
+$green = "green"   
+$cyan = "Cyan"   
+$yellow = "Yellow"   
+
+Write-Host '
+(o<
+<_)
+' -ForegroundColor $yellow
+Write-Host 'Greetings Davi, Shall we play a game? 🕹️' -ForegroundColor $cyan;
+Write-Host 'Happy hacking and coding!🧑‍💻' -ForegroundColor $green;
+Write-Host ''
