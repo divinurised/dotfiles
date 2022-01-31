@@ -41,6 +41,13 @@ Function search-google {
         start "$url"
 }
 
+Function browser-url {
+  $baseURL = 'https://'
+  $args | % { $baseURL = $baseURL + "$_+" }
+  $search = $baseURL.Substring(0, $baseURL.Length - 1)
+  start "$search"
+}
+
 # Welcome message
 $green = "green"   
 $cyan = "Cyan"   
