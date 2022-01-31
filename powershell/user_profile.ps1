@@ -19,7 +19,7 @@ oh-my-posh --init --shell pwsh --config $PROMPT_CONFIG | Invoke-Expression
 # Set-PSReadLineKeyHandler -Chord 'Ctrl+d' -Function DeleteChar
 Set-PSReadLineOption -PredictionSource History
 
-#Fzf
+# Fzf
 Import-Module PSFzf
 # Set-PsFzfOption PSReadLineChordProvider 'Ctrl+f' -PSReadLineChordReverseHistory 'Ctrl+r'
 
@@ -30,15 +30,25 @@ Set-Alias g git
 Set-Alias grep findstr
 Set-Alias tig 'C:\Program Files\Git\usr\bin\tig.exe'
 Set-Alias less 'C:\Program Files\Git\usr\bin\less.exe'
+Set-Alias gg search-google
+Set-Alias ss browser-url
 
+# Functions
+Function search-google {
+        $query = 'https://www.google.com/search?q='
+        $args | % { $query = $query + "$_+" }
+        $url = $query.Substring(0, $query.Length - 1)
+        start "$url"
+}
+
+# Welcome message
 $green = "green"   
 $cyan = "Cyan"   
 $yellow = "Yellow"   
-
 Write-Host '
 (o<
 <_)
 ' -ForegroundColor $yellow
-Write-Host 'Greetings Davi, Shall we play a game? 🕹️' -ForegroundColor $cyan;
+Write-Host 'Greetings Davi! Shall we play a game? 🕹️' -ForegroundColor $cyan;
 Write-Host 'Happy hacking and coding!🧑‍💻' -ForegroundColor $green;
 Write-Host ''
