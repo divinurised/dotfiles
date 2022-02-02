@@ -32,6 +32,7 @@ Set-Alias tig 'C:\Program Files\Git\usr\bin\tig.exe'
 Set-Alias less 'C:\Program Files\Git\usr\bin\less.exe'
 Set-Alias gg search-google
 Set-Alias ss browser-url
+Set-Alias cr Clear-RecycleBin -Force
 
 # Functions
 Function search-google {
