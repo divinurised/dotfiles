@@ -2,7 +2,7 @@
 
 # Davi Alcântara's Dotfiles
 
-I recently updated my Windows from 10 to 11, and I decided to change my terminal. So i recommend to use Windos 11!
+I recently updated my Windows from 10 to 11, and I decided to change my terminal. So i recommend to use Windows 11!
 
 ## PowerShell setup
 
