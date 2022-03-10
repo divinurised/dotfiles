@@ -33,13 +33,16 @@ Set-Alias less 'C:\Program Files\Git\usr\bin\less.exe'
 Set-Alias gg search-google
 Set-Alias ss browser-url
 Set-Alias cr Clear-RecycleBin -Force
+Set-Alias dev cdd
+Set-Alias work cdw
+Set-Alias pwsconfig pwsc
 
 # Functions
 Function search-google {
-        $query = 'https://www.google.com/search?q='
-        $args | % { $query = $query + "$_+" }
-        $url = $query.Substring(0, $query.Length - 1)
-        start "$url"
+  $query = 'https://www.google.com/search?q='
+  $args | % { $query = $query + "$_+" }
+  $url = $query.Substring(0, $query.Length - 1)
+  start "$url"
 }
 
 Function browser-url {
@@ -47,6 +50,14 @@ Function browser-url {
   $args | % { $baseURL = $baseURL + "$_+" }
   $search = $baseURL.Substring(0, $baseURL.Length - 1)
   start "$search"
+}
+
+
+function cdd { set-location 'C:\Users\dxvia\Development\projects' }
+function cdw { set-location 'C:\Users\dxvia\Development\work' }
+function pwsc { 
+  set-location 'C:\Users\dxvia\.config\powershell'
+  code user_profile.ps1 
 }
 
 # Welcome message
